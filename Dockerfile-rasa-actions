@@ -1,0 +1,12 @@
+FROM rasa/rasa-sdk:2.6.0
+
+WORKDIR /app
+
+USER root
+
+COPY ./actions /app
+COPY ./qa_data /app/qa_data
+
+RUN pip install -r ./requirements-actions.txt
+
+# USER 1001

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script>!(function () {
+    let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+    (e.src =
+        "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+        (e.async = !0),
+        (e.onload = () => {
+            sessionStorage.clear();
+            localStorage.clear();
+            window.WebChat.default(
+                {
+                    customData: { language: "en" },
+                    initPayload: "greet",
+                    socketPath: "/socket.io/",
+                    socketUrl: "http://localhost:5005",
+                    profileAvatar: "avatar.png",
+                    title: "Чат бот",
+                    subtitle: "експерт з \"Війни та миру\""
+                },
+                null
+            );
+        }),
+        t.insertBefore(e, t.firstChild);
+})();
+</script>
+</body>
+</html>

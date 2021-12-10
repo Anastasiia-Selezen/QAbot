@@ -1,0 +1,18 @@
+version: "2.0"
+
+intents:
+  - greet
+  - user_question
+
+responses:
+  utter_welcome:
+    - text: "Вітаю! Я бот який може знайти відповідь на запитання по \"Війні та миру\". Що хочете спитати?"
+  utter_wait:
+    - text: "Зачекайте..."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_qa

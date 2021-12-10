@@ -1,0 +1,11 @@
+version: "2.0"
+
+rules:
+
+  - rule: welcome user
+    conversation_start: true
+    steps:
+      - intent: greet
+      - action: utter_welcome
+
+
